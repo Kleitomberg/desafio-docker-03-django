@@ -159,6 +159,14 @@ python manage.py collectstatic --noinput
 ```
 
 Dessa forma, os arquivos estáticos são preparados durante o processo de build da imagem.
+O WhiteNoise serve esses arquivos pelo Gunicorn, sem depender do modo de depuração
+ou de um servidor web adicional.
+
+## 🏠 Página inicial
+
+A rota `/` apresenta uma página de boas-vindas sobre o projeto e os conceitos
+praticados. Ela continua estilizada com `DEBUG=0`, inclusive quando executada
+no container.
 
 ---
 

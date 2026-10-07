@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1020">
+    <meta name="description" content="Um projeto prático de Django, Docker e DevOps.">
+    <title>Desafio 03 | Django + Docker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'app/css/home.css' %}">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="/" aria-label="Desafio 03 - início">
+                <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+                <span>kleitomberg<span class="brand-dot">.</span></span>
+            </a>
+            <span class="topbar-label"><span class="status-dot"></span> AMBIENTE ONLINE</span>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="eyebrow-line"></span> LABORATÓRIO DEVOPS · PROJETO 03</p>
+                    <h1>Seu próximo deploy<br>começa <span>aqui.</span></h1>
+                    <p class="hero-description">
+                        Uma aplicação Django empacotada do zero em um container Docker.
+                        Pequenos passos, infraestrutura de verdade.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#stack">Conheça o projeto <span aria-hidden="true">↓</span></a>
+                        <span class="hero-note">Feito para aprender fazendo.</span>
+                    </div>
+                </div>
+
+                <div class="terminal-card" aria-label="Resumo do container em execução">
+                    <div class="terminal-top">
+                        <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                        <span>container status</span>
+                        <span class="terminal-menu" aria-hidden="true">···</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line"><span class="prompt">$</span> docker ps</p>
+                        <div class="container-row">
+                            <span class="container-icon" aria-hidden="true">▣</span>
+                            <span class="container-name">desafio3-web</span>
+                            <span class="container-status"><span class="status-dot"></span> running</span>
+                        </div>
+                        <div class="terminal-divider"></div>
+                        <div class="terminal-info"><span>IMAGE</span><strong>python:3.12-slim</strong></div>
+                        <div class="terminal-info"><span>SERVER</span><strong>gunicorn · :8000</strong></div>
+                        <div class="terminal-info"><span>DEBUG</span><strong class="debug-off">false</strong></div>
+                        <p class="terminal-ready"><span>✓</span> aplicação pronta para receber tráfego</p>
+                    </div>
+                    <span class="terminal-glow" aria-hidden="true"></span>
+                </div>
+
+                <div class="hero-index" aria-hidden="true">01 <span>—</span> 03</div>
+            </section>
+
+            <section class="stack-section" id="stack">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow"><span class="eyebrow-line"></span> O QUE TEM AQUI</p>
+                        <h2>Do código ao container.</h2>
+                    </div>
+                    <p class="section-intro">Uma aplicação simples, com as peças essenciais para entender como colocar um projeto no ar.</p>
+                </div>
+                <div class="stack-grid">
+                    <article class="stack-card">
+                        <span class="card-number">01</span>
+                        <span class="card-icon icon-python" aria-hidden="true">Py</span>
+                        <h3>Aplicação Django</h3>
+                        <p>Uma base Python pronta para receber novas ideias e funcionalidades.</p>
+                        <span class="card-tag">PYTHON 3.12</span>
+                    </article>
+                    <article class="stack-card">
+                        <span class="card-number">02</span>
+                        <span class="card-icon icon-docker" aria-hidden="true">▰</span>
+                        <h3>Imagem Docker</h3>
+                        <p>Dependências e código empacotados de forma consistente e portátil.</p>
+                        <span class="card-tag">DOCKERFILE</span>
+                    </article>
+                    <article class="stack-card">
+                        <span class="card-number">03</span>
+                        <span class="card-icon icon-deploy" aria-hidden="true">↗</span>
+                        <h3>Pronto para deploy</h3>
+                        <p>Gunicorn e arquivos estáticos servidos sem depender do modo debug.</p>
+                        <span class="card-tag">GUNICORN + WHITENOISE</span>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>Construído com curiosidade <span class="footer-heart">♥</span> e containers.</span>
+            <span class="footer-right">DESAFIO 03 <span>·</span> DJANGO + DOCKER</span>
+        </footer>
+    </div>
+</body>
+</html>

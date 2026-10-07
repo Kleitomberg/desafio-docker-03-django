@@ -23,5 +23,8 @@ env
 # Logs
 *.log
 
+# Collected static files
+staticfiles/
+
 # Documentation
 README.md
